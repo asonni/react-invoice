@@ -4,15 +4,20 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "dev": "vite",
     "build:invoice": "tsx src/example.tsx"
   },
   "dependencies": {
     "@react-pdf/renderer": "^4.0.0",
-    "react": "^18.3.1"
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
   },
   "devDependencies": {
+    "@types/node": "^25.9.2",
     "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
     "tsx": "^4.19.2",
-    "typescript": "^5.8.3"
+    "typescript": "^5.8.3",
+    "vite": "^5.4.10"
   }
 }
