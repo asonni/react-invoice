@@ -1,6 +1,19 @@
 # react-invoice
 
-A React PDF invoice matching the provided mockup style using `@react-pdf/renderer` and Geist Mono.
+Generate a styled invoice PDF with `@react-pdf/renderer` and preview it in a browser using Vite.
+
+## Features
+
+- Reusable React PDF invoice component
+- Scripted PDF generation to `invoice.pdf`
+- Browser preview page with:
+  - embedded PDF viewer
+  - local PDF upload
+  - open-in-new-tab action
+
+## Prerequisites
+
+- Node.js 18+
 
 ## Install
 
@@ -8,25 +21,42 @@ A React PDF invoice matching the provided mockup style using `@react-pdf/rendere
 npm install
 ```
 
-## Generate the PDF
+## Available Scripts
 
 ```bash
 npm run build:invoice
 ```
 
-This writes `invoice.pdf` to the project root.
-
-## View the PDF in the browser
+Generates `invoice.pdf` in the project root.
 
 ```bash
 npm run dev
 ```
 
-The page includes a PDF viewer that loads the bundled `invoice.pdf` by default.
-You can also select any local PDF file from the UI for quick preview.
+Starts the Vite development server for web preview.
 
-## Files
+## Typical Workflow
 
-- `src/InvoicePdf.tsx` — reusable invoice PDF component
-- `src/example.tsx` — example data + PDF generation script
-- `src/main.tsx` — web PDF viewer app
+1. Generate the latest invoice PDF:
+
+   ```bash
+   npm run build:invoice
+   ```
+
+2. Start the web preview:
+
+   ```bash
+   npm run dev
+   ```
+
+3. Open the local URL shown by Vite (usually `http://127.0.0.1:5173`).
+
+The viewer loads bundled `invoice.pdf` by default, and you can also pick any local PDF from the UI.
+
+## Project Structure
+
+- `src/InvoicePdf.tsx` - reusable invoice PDF component
+- `src/example.tsx` - example data + PDF generation script
+- `src/main.tsx` - web PDF viewer app
+- `invoice.pdf` - generated output file
+- `.gitignore` - ignored files for dependencies, build artifacts, caches, and logs
