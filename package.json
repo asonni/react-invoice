@@ -1,0 +1,18 @@
+{
+  "name": "react-invoice",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build:invoice": "tsx src/example.tsx"
+  },
+  "dependencies": {
+    "@react-pdf/renderer": "^4.0.0",
+    "react": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.3",
+    "tsx": "^4.19.2",
+    "typescript": "^5.8.3"
+  }
+}
